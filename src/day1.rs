@@ -24,7 +24,7 @@ fn part1(input: &Vec<i32>) -> i32 {
 fn part2(input: &Vec<i32>) -> i32 {
     let mut last = i32::MAX;
     let mut count = 0;
-    for i in 3..input.len()+1 {
+    for i in 3..input.len() + 1 {
         let window_size = input[i - 3..i].iter().sum();
         if window_size > last {
             count += 1;

@@ -3,7 +3,7 @@ use std::fs;
 enum Direction {
     Forward(i32),
     Down(i32),
-    Up(i32)
+    Up(i32),
 }
 
 fn parse_input(path: &str) -> Vec<Direction> {
@@ -17,7 +17,7 @@ fn parse_input(path: &str) -> Vec<Direction> {
             "forward" => result.push(Direction::Forward(value)),
             "down" => result.push(Direction::Down(value)),
             "up" => result.push(Direction::Up(value)),
-            _ => panic!("Unknown direction")
+            _ => panic!("Unknown direction"),
         }
     }
     return result;
@@ -30,7 +30,7 @@ fn part1(input: &Vec<Direction>) -> i32 {
         match direction {
             Direction::Forward(value) => horizontal += value,
             Direction::Down(value) => depth += value,
-            Direction::Up(value) => depth -= value
+            Direction::Up(value) => depth -= value,
         }
     }
     return horizontal * depth;
@@ -45,9 +45,9 @@ fn part2(input: &Vec<Direction>) -> i32 {
             Direction::Forward(value) => {
                 horizontal += value;
                 depth += aim * value;
-            },
+            }
             Direction::Down(value) => aim += value,
-            Direction::Up(value) => aim -= value
+            Direction::Up(value) => aim -= value,
         }
     }
     return horizontal * depth;
