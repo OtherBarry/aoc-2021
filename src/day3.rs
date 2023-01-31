@@ -55,7 +55,6 @@ fn part2(input: &Vec<Vec<u32>>) -> i32 {
             break;
         }
     }
-    println!("Oxygen Generator: {:?}", oxygen_generator_vec);
     let oxygen_generator_string = oxygen_generator_vec[0]
         .iter()
         .map(|x| x.to_string())
@@ -75,7 +74,6 @@ fn part2(input: &Vec<Vec<u32>>) -> i32 {
             break;
         }
     }
-    println!("CO2 Scrubber: {:?}", c02_scrubber_vec);
     let c02_scrubber_string = c02_scrubber_vec[0]
         .iter()
         .map(|x| x.to_string())
