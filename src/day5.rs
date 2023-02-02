@@ -93,7 +93,7 @@ fn calculate_intersections(input: &Vec<Vec<Vec<i32>>>, allow_diagonal: bool) -> 
 }
 
 pub fn run(path: &str) {
-    println!("Day 3:");
+    println!("Day 5:");
     let input = parse_input(path);
     println!("\tPart 1: {}", calculate_intersections(&input, false));
     println!("\tPart 2: {}", calculate_intersections(&input, true));
